@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF - 8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Dosis:300,400,700"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title> Splashy Page </title>
+    </head>
+    <body>
+
+      <section>
+        <video src="images/Cosmos - 17692.mp4" autoplay="" muted="" loop="">
+        </div>
+      </section>
+
+      <script type="text/javascript">
+      let video = document.querySelector('video');
+      window.addEventListener('scroll', function(){
+        let value = 1 + window.scrollY/-300;
+        video.style.opacity = value;
+      })
+      </script>
+
+      <section>
+        <div class="container">
+            <div class="banner">
+                <h1> Hey <span> Splashy </span></h1>
+                <button type="button" class="btn-center">Splash</button>
+            </div>
+        </div>
+      </section>
+
+      <section1>
+        <script type= "text/javascript">
+            function toggle_visibility(id){
+              document.getElementById(id);
+                if(submited=true){
+                  document.querySelector('.bg-modal').style.display = "flex";
+              }
+            }
+          </script> 
+
+        <div class="bg-modal" style ="display: none;">
+            <div class="modal-content">
+                <div class="close"></div>
+                    <p>Thank you for your interest. Your application form has been submitted!</p>
+            </div>
+        </div>
+          
+       <div class="form">
+            <section class="application" id="application">
+                <div class="container">
+                <h2 class="form-title">Application</h2>
+                <script type="text/javascript">var submitted=false;</script>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
+                      onload="if(submitted) {
+                          setTimeout(function(){
+                            window.location.href='/?submitted=true';
+                          }, 1000);
+                        }">
+                      </iframe>
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeXD7pf2uD5cR5bGD9fiIQapXArI5qs2vVMZhJyfnK83AB4Uw/formResponse"  method="post" target="hidden_iframe" 
+                      onsubmit="submitted=true;" id= "mG61Hd">
+     
+                        <div class="form-fields">
+                          <div class="form-group col-md-6">
+                            <label for="ivalidationTooltip01">Name</label>
+                            <input type="text" name="entry.722432725" class="form-control" required="" id="inputEmail4">
+                          </div>
+                         <div class="form-group col-md-6">
+                           <label for="validationTooltip02">Hi!</label>
+                            <input type="text" name="entry.2075556585" class="form-control" required="" id="inputPassword4">
+                          </div>
+                        </div>
+          
+                        <button type="submit" onclick="toggle_visibility()" id='submitForm' class="btn-form">Submit Application </button> 
+                    </form> 
+                </div>
+              </section>
+        </div>
+      </section1>
+    </body>
+</html>
